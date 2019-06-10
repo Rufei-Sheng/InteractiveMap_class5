@@ -1,0 +1,75 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+      <title>Citibike Station Map</title>
+      <meta name="description" content="The HTML5 Herald">
+      <meta name="author" content="SitePoint">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <!-- NVD3 for pie chart -->
+      <link href="css/nv.d3.css" rel="stylesheet" type="text/css">
+      <!-- other develop file for pie chart -->
+
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <!-- mapboxgl css -->
+      <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.css' rel='stylesheet' />
+      <!-- my css -->
+      <link rel="stylesheet" href="css/styles.css?v=1.0">
+      <div id="Header">
+        <h1>Explore Citibike Station 🚲 and Airport ✈️ </h1>
+        <h2>Want to know which taxi zone? Move Mouse!</h2>
+      </div>
+  </head>
+
+<body>
+  <div id='mapContainer'>
+    <div class="sidebar">
+      <div class="info-box">
+        <div class="legend">
+          <h3>Legend for the color:</h3>
+          <!-- We'll programmatically make the legend here -->
+        </div>
+      </div>
+      <div class="info-box">
+        <h3>Move your mouse to get taxi zone information</h3>
+        <h4>This taxi zone is:</h4>
+        <span id='zonename'>Please move the mouse around</span>
+        <br>
+        <span id='brough'>Please move the mouse around</span>
+        <div class='with-3d-shadow with-transitions'>
+          <h4>The distribution of commute manner</h4>
+          <svg id="piechart" class="mypiechart"></svg>
+        </div>
+        <!-- We'll programmatically make the pie chart here -->
+      </div>
+      <div class="info-box">
+        <h3>Airport Location</h3>
+        <button class="flyto" data-airport="JFK_airport">JFK Airport</button>
+        <button class="flyto" data-airport="EWR_airport">EWR Airport</button>
+        <button class="flyto" data-airport="LGA_airport">LGA Airport</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- bootstrap js -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <!-- ds js and NVD3 for pie chart -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js" charset="utf-8"></script>
+  <!-- <script src="https://d3js.org/d3.v5.min.js"></script> -->
+  <script src="js/nv.d3.js"></script>
+  <!-- <script src="js/nv.d3.js.map"></script> -->
+  <script src="lib/stream_layers.js"></script>
+  <!-- mapboxgl js -->
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js'></script>
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  <script src="js/subwayLocation.js"></script>
+  <script src="js/scripts.js"></script>
+
+</body>
+</html>
